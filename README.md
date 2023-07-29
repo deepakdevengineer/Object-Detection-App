@@ -1,6 +1,7 @@
 # Object Detection Android App
 
-![TensorFlow Lite Logo](https://www.tensorflow.org/lite/images/brandmark_tflite_lockup_color.png)
+![Logo](https://github.com/deepakdevengineer/Object-Detection-App/assets/129176978/78775f7a-432f-404c-83d3-682011a10d35)
+
 
 This Android app is designed to detect objects in real-time using the camera of your device. It utilizes the power of TensorFlow Lite and is equipped with pre-trained machine learning models for object detection. You can choose between multiple models, including MobileNet SSD, EfficientDet Lite 0, EfficientDet Lite 1, and EfficientDet Lite 2, all trained on the COCO dataset.
 
