@@ -1,49 +1,82 @@
-# TensorFlow Lite Object Detection Android Demo
+# Object Detection Android App
 
-### Overview
+![TensorFlow Lite Logo](https://www.tensorflow.org/lite/images/brandmark_tflite_lockup_color.png)
 
-This is a camera app that continuously detects the objects (bounding boxes and
-classes) in the frames seen by your device's back camera, with the option to use
-a quantized
-[MobileNet SSD](https://tfhub.dev/tensorflow/lite-model/ssd_mobilenet_v1/1/metadata/2),
-[EfficientDet Lite 0](https://tfhub.dev/tensorflow/lite-model/efficientdet/lite0/detection/metadata/1),
-[EfficientDet Lite1](https://tfhub.dev/tensorflow/lite-model/efficientdet/lite1/detection/metadata/1),
-or
-[EfficientDet Lite2](https://tfhub.dev/tensorflow/lite-model/efficientdet/lite2/detection/metadata/1)
-model trained on the [COCO dataset](http://cocodataset.org/). These instructions
-walk you through building and running the demo on an Android device.
+This Android app is designed to detect objects in real-time using the camera of your device. It utilizes the power of TensorFlow Lite and is equipped with pre-trained machine learning models for object detection. You can choose between multiple models, including MobileNet SSD, EfficientDet Lite 0, EfficientDet Lite 1, and EfficientDet Lite 2, all trained on the COCO dataset.
 
-The model files are downloaded via Gradle scripts when you build and run the
-app. You don't need to do any steps to download TFLite models into the project
-explicitly.
+## Features
 
-This application should be run on a physical Android device.
+- Real-time object detection through the device's camera.
+- Multiple models available for different accuracy and performance trade-offs.
+- Utilizes quantized models for efficient inference.
+- Bounding boxes and class labels are displayed for detected objects.
+- User-friendly interface with easy-to-understand instructions.
 
-## Build the demo using Android Studio
+## Getting Started
+
+Follow these instructions to build and run the Object Detection Android app on your physical Android device.
 
 ### Prerequisites
 
-*   The **[Android Studio](https://developer.android.com/studio/index.html)**
-    IDE. This sample has been tested on Android Studio Bumblebee.
+- Android Studio IDE installed on your development machine (tested on Android Studio Bumblebee).
+- Physical Android device with developer mode enabled and a minimum OS version of SDK 24 (Android 7.0 - Nougat).
 
-*   A physical Android device with a minimum OS version of SDK 24 (Android 7.0 -
-    Nougat) with developer mode enabled. The process of enabling developer mode
-    may vary by device.
+### Building and Running the App
 
-### Building
+1. Open Android Studio and select "Open an existing Android Studio project."
 
-*   Open Android Studio. From the Welcome screen, select Open an existing
-    Android Studio project.
+2. Navigate to the `tensorflow-lite/examples/object_detection/android` directory and click "OK."
 
-*   From the Open File or Project window that appears, navigate to and select
-    the tensorflow-lite/examples/object_detection/android directory. Click OK.
+3. If prompted for Gradle Sync, proceed with it.
 
-*   If it asks you to do a Gradle Sync, click OK.
+4. Connect your Android device to your computer and ensure that developer mode is enabled.
 
-*   With your Android device connected to your computer and developer mode
-    enabled, click on the green Run arrow in Android Studio.
+5. Click the green "Run" arrow in Android Studio to install and run the app on your connected Android device.
 
-### Models used
+### Model Selection
 
-Downloading, extraction, and placing the models into the assets folder is
-managed automatically by the download.gradle file.
+The app comes with pre-trained models that are downloaded and managed automatically during the build process. You can choose from the following models:
+
+- MobileNet SSD: A lightweight model suitable for real-time object detection on resource-constrained devices.
+- EfficientDet Lite 0, 1, and 2: These models offer improved accuracy while still maintaining reasonable performance.
+
+### Usage
+
+1. Launch the app on your Android device.
+
+2. Point the camera towards the objects you want to detect.
+
+3. The app will analyze the camera feed and draw bounding boxes around detected objects, along with their corresponding class labels.
+
+4. Explore the performance of different models by selecting them from the app's settings.
+
+### Customization
+
+If you want to customize the app or use your own TensorFlow Lite models, follow these steps:
+
+1. Replace the existing model files in the `assets` folder with your desired models (ensure they are compatible with TensorFlow Lite).
+
+2. Modify the app's code to load and use your custom models, adjusting the input and output requirements accordingly.
+
+### Technologies Used
+
+- TensorFlow Lite: For efficient and fast object detection on Android devices.
+- Android CameraX API: For capturing images from the device's camera.
+- Android UI Components: For building an intuitive user interface.
+
+## Contributing
+
+Contributions to the project are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. Please see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- TensorFlow team for providing TensorFlow Lite and pre-trained object detection models.
+- COCO dataset for enabling the training of accurate object detection models.
+
+---
+
+Thank you for using our Object Detection Android app! We hope you find it useful and enjoy exploring the world of object recognition. If you have any questions or feedback, don't hesitate to reach out. Happy detecting!
